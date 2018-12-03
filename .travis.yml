@@ -8,7 +8,7 @@ before_install:
 script:
   - docker run vong/react-test npm test -- --coverage
 
-after_sucess:
+after_success:
   - docker build -t vong/multi_client ./client
   - docker build -t vong/multi_nginx ./nginx
   - docker build -t vong/multi_server ./server
