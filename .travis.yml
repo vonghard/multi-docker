@@ -18,7 +18,7 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
 # Push images to HUB
-  - docker push vong/multi_client
-  - docker push vong/multi_nginx
-  - docker push vong/multi_server
-  - docker push vong/multi_worker
+  - docker push vonghard/multi_client
+  - docker push vonghard/multi_nginx
+  - docker push vonghard/multi_server
+  - docker push vonghard/multi_worker
