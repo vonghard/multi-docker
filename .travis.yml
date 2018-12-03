@@ -22,3 +22,16 @@ after_success:
   - docker push vonghard/multi_nginx
   - docker push vonghard/multi_server
   - docker push vonghard/multi_worker
+
+deploy:
+  provide: elasticbeanstalk
+  region: eu-west-1
+  app: multi-docker
+  env: MultiDocker-env
+  bucket_name: elasticbeanstalk-eu-west-1-192540139408
+  bucket_path: docker-multi
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
