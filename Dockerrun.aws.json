@@ -5,11 +5,13 @@
       "name": "client",
       "image": "vonghard/multi_client",
       "hostname": "client",
+      "memory": 128,
       "essential": false
     },
     {
       "name": "nginx",
       "image": "vonghard/multi_nginx",
+      "memory": 128,
       "essential": true,
       "portMappings": [
         {
@@ -23,12 +25,14 @@
       "name": "server",
       "image": "vonghard/multi_server",
       "hostname": "api",
+      "memory": 128,
       "essential": false
     },
     {
       "name": "worker",
       "image": "vonghard/multi_worker",
       "hostname": "worker",
+      "memory": 128,
       "essential": false
     }
   ]
