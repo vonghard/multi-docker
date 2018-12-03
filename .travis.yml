@@ -24,7 +24,7 @@ after_success:
   - docker push vonghard/multi_worker
 
 deploy:
-  provide: elasticbeanstalk
+  provider: elasticbeanstalk
   region: eu-west-1
   app: multi-docker
   env: MultiDocker-env
